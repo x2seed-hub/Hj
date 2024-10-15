@@ -14676,7 +14676,7 @@ repeat wait() until game:GetService("Players").LocalPlayer.Character:FindFirstCh
 wait(0.4)
 if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam")then repeat wait()if game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("ChooseTeam")then if string.find(tostring(getgenv().Team),"Pirate")then for a,a in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.TextButton.Activated))do a.Function()end elseif string.find(tostring(getgenv().Team),"Marine")then for a,a in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.TextButton.Activated))do a.Function()end else for a,a in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.TextButton.Activated))do a.Function()end end end until game.Players.LocalPlayer.Team~=nil and game:IsLoaded()end;function InstantKick(a)game.Players.LocalPlayer:Kick(a)end
-elseif getgenv().Mode == "PC" then
+elseif getgenv().Mode == "Mobile" then
 game.Players.LocalPlayer:Kick("Sorry, we're doing it")
 else
 game.Players.LocalPlayer:Kick("What Modes ?")
