@@ -1,4 +1,3 @@
-if getgenv().Mode == "Mobile" then
 getgenv().Team = "Pirates"
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
@@ -14664,20 +14663,3 @@ getgenv().AutoRejoin = true
 	            end
 	        end
 	    end)
-print("Attack Hub Kaitun")
-repeat wait() until game.Players
-repeat wait() until game.Players.LocalPlayer
-repeat wait() until game.ReplicatedStorage
-repeat wait() until game.ReplicatedStorage:FindFirstChild("Remotes");
-repeat wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui");
-repeat wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main");
-repeat wait() until game:GetService("Players")
-repeat wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild("Energy")
-wait(0.4)
-if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
-if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam")then repeat wait()if game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Main"):FindFirstChild("ChooseTeam")then if string.find(tostring(getgenv().Team),"Pirate")then for a,a in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.TextButton.Activated))do a.Function()end elseif string.find(tostring(getgenv().Team),"Marine")then for a,a in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.TextButton.Activated))do a.Function()end else for a,a in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.TextButton.Activated))do a.Function()end end end until game.Players.LocalPlayer.Team~=nil and game:IsLoaded()end;function InstantKick(a)game.Players.LocalPlayer:Kick(a)end
-elseif getgenv().Mode == "Mobile" then
-game.Players.LocalPlayer:Kick("Sorry, we're doing it")
-else
-game.Players.LocalPlayer:Kick("What Modes ?")
-end
